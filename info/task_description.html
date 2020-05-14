@@ -1,20 +1,51 @@
 <!-- Describe task in general -->
 
 <p>
-    Sum two passed ints
+    Sam has prepared a fitness program so that he can become more strong! 
+	The program is made of N sessions. During the i-th session, Sam will 
+	do certain amount of pushups. The number of pushups he does in each 
+	session are strictly increasing.
 </p>
-
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+<p>
+	The <i>difficulty</i> of his fitness program is equal to the maximum 
+	difference in the number of pushups between any two consecutive training 
+	sessions.
+</p>
+<p>
+	To make his program less difficult, Sam has decided to add up to K 
+	additional training sessions to his fitness program. He can add these 
+	sessions anywhere in his fitness program, and do any number of pushups 
+	in each of them. After the additional training session are added, 
+	the number of pushups he does in each session must still be strictly increasing. 
+	What is the minimum difficulty possible?
 </p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are ints.
+    <strong>Input: </strong> 
+	<p>
+		Two arguments
+		<ul>
+			<li>
+			first - list of positive integers. The number of pushups in
+			each training session;
+			</li>
+			<li>
+			second - positive integer. Additional sessions that Sam may 
+			add to his fitness program.
+			</li>
+		</ul>
+	</p>
+	
+	
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong>
+	<p>	
+		An integer. The minimum difficulty possible after up to K additional 
+		training sessions are added.
+	</p>
 </p>
 
 
@@ -23,30 +54,25 @@
     <p>
         <strong>Example:</strong>
     </p>
-
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">sumTwo(2, 3) == 5
-sumTwo(5, 7) == 12
+<pre class="brush: python">
+workout([100, 200, 230], 1) == 50
+workout([10, 13, 15, 16, 17], 2) == 2
 </pre>
-{% else %}
-<pre class="brush: python">sum_two(2, 3) == 5
-sum_two(5, 7) == 12
-</pre>
-{% endif %}
+	<p>
+	In the first case Sam can add up to one session. The added sessions 
+	are marked in bold: 100, <strong>150</strong>, 200, 230. The difficulty is now 50.
+	</p>
+	<p>
+	In the second case Sam can add up to two sessions. Then his optimal fitness program
+	may be as foloows: 10, <strong>11</strong>, 13, 15, 16, 17, <strong>18</strong>. 
+	The difficulty is now 2
+	</p>	
 </div>
-
-
-<!-- Here you can explain how it can be used in development -->
-<!-- The section is optional -->
-<p class="for_info_only">
-
-    <strong>How it’s used: </strong>
-    <i>(math is used everywhere)</i>
-</p>
 
 <!-- Here you can explain some constraints for input-->
 <!-- The section is optional -->
 <p>
-    <strong>Precondition:</strong>
-    <i>both given ints should be between -1000 and 1000</i>
+    <strong>Precondition:</strong></br>
+    2 &le; N &le; 1000 </br>
+	1 &le; K &le; 500  </br>
 </p>
