@@ -1,16 +1,16 @@
-def sum_two(a, b):
-    """
-        sums two passed arguments
-    """
+from typing import List
+
+def workout(sessions: List[int], additional: int) -> int:
     # your code here
-    return None
+    return 1
 
 
 if __name__ == '__main__':
     print("Example:")
-    print(sum_two(3, 2))
+    print(workout([100, 200, 230], 1))
     
     # These "asserts" are used for self-checking and not for an auto-testing
-    assert sum_two(3, 2) == 5, "First"
-    assert sum_two(5, 7) == 12, "Second"
+    assert workout([100, 200, 230], 1) == 50,     "First"
+    assert workout([10, 13, 15, 16, 17], 2) == 2, "Second"
+	assert workout([9, 10, 20, 26, 30], 6) == 3,  "Third"
     print("Coding complete? Click 'Check' to earn cool rewards!")
