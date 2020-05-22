@@ -12,5 +12,5 @@ if __name__ == '__main__':
     # These "asserts" are used for self-checking and not for an auto-testing
     assert workout([100, 200, 230], 1) == 50,     "First"
     assert workout([10, 13, 15, 16, 17], 2) == 2, "Second"
-	assert workout([9, 10, 20, 26, 30], 6) == 3,  "Third"
+    assert workout([9, 10, 20, 26, 30], 6) == 3,  "Third"
     print("Coding complete? Click 'Check' to earn cool rewards!")
